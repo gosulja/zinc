@@ -177,7 +177,7 @@ Zinc has a small list of in-built functions and libraries.
 #### `print`
 Zinc will print the value if it supported or not. Can print: `string`, `number`, `boolean`, `null`, `array`, `object`
 
-#### `as'
+#### `as`
 Zinc will convert the given value to the one provided. Example:
 ```ts
 print(as(5, "string"))
