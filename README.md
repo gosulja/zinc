@@ -9,6 +9,18 @@ Zinc or blinxscript is a scripting language written for learning.
 4. Run `zinc [file.zc]`
 5. Enjoy
 
+A prompt is available, just run it without file args.
+
+```
+zinc [file.zc]
+```
+
+or
+
+```
+zinc
+```
+
 # Learn
 Zinc doesn't have a learning reference, but it's similar to any programming language.
 
