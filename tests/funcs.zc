@@ -1,0 +1,5 @@
+fn adder(a, b) {
+    a + b
+}
+
+print(adder(1, 20))
