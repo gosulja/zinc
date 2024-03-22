@@ -67,13 +67,126 @@ Member assignment has not been added yet.
 Without logic, you cannot program. Zinc has while statements, if statements, for statements. Everything is a statement.
 The way Zinc handles some statements varies.
 
-#### If statements
+### If statements
 ```ts
 let age = 20;
 
-if 
+if age > 18 {
+    print("Access Granted.");
+} else {
+    print("Access Denied.");
+}
+```
+Note, if statements only has an else branch available, even though theres an `elif` keyword, it isn't functional and will error.
 
+### While statements
+```ts
+let count = 0;
 
+while count < 10 {
+    count = count + 1;
+}
 
+print(count)
+```
 
+While statements continuously run until the condition is false. All relational expressions result to a bool value.
 
+### For statements
+Zinc contains two iterables currently: arrays and strings.
+
+```ts
+const nums = [1, 2, 3, 4, 5, 6];
+let sum = 0;
+
+for num : nums {
+    sum = sum + num;
+}
+
+print(sum);
+```
+
+The for statement is structured like this:
+
+`for <item_identifier> : <iterable> { <body> }`
+
+The `item_identifier` doesn't have the `let` keyword to initialize it.
+
+### Functions
+Zinc has functions like any other language, and anonymous functions. Zinc does not have a return keyword, so any identifier or literal which is at
+the end of the function will be returned.
+
+```rs
+fn adder(a, b) {
+    a + b
+}
+
+print(adder(5, 5));
+```
+
+### Anonymous functions
+Like mentioned before, you can use anonymous functions.
+
+```rs
+const adder = fn(a, b) {
+    a + b
+}
+
+print(adder(5, 5));
+```
+
+### Imports and Exports
+Zinc has the feature to export and import functions and variables. With the use of the `pub` keyword before the `let` or `const` keyword, it can be achieved.
+
+name.zc
+```rs
+pub const name = "John";
+```
+
+main.zc
+```rs
+import("name")
+
+print(name);
+```
+
+#### In-built functions and libraries
+Zinc has a small list of in-built functions and libraries.
+
+* print
+* as
+* type
+* len
+* import
+
+* os
+* io
+
+#### `print`
+Zinc will print the value if it supported or not. Can print: `string`, `number`, `boolean`, `null`, `array`, `object`
+
+#### `as'
+Zinc will convert the given value to the one provided. Example:
+```ts
+print(as(5, "string"))
+```
+
+#### `type`
+Zinc will return the type of the value provided.
+
+#### `len`
+Zinc will return the length of the iterable as a number value.
+
+#### `import`
+Zinc will import the given scripts exported environment variables into the current environment.
+
+### Libraries
+
+#### `os`
+Contains:
+* time -> Number
+* clock -> Number
+
+#### `io`
+Contains:
+* input -> String | Null
