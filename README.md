@@ -1,6 +1,9 @@
 # zinc
 Zinc or blinxscript is a scripting language written for learning.
 
+# Current Release: Unstable
+This is not production ready, and is only for people who are testing for me. This unstable release has many unknown bugs I have yet to encounter. Some features may not work as intended.
+
 # Usage
 1. Download the `zinc-us-1.0` release.
 2. Extract the zip.
